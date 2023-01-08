@@ -1,0 +1,90 @@
+\:host
+  width: 70%
+  display: block
+  margin: 5rem auto
+
+@media only screen and (max-width: 660px)
+  \:host
+    width: 100%
+
+.card
+  --highlight-color: #FFE81F
+
+mat-card
+  --mdc-elevated-card-container-color: rgb(0 0 0 / 69%)
+  margin: 1rem
+  border: 1px solid #554c00
+  box-shadow: inset 0px 2px 10px 0px rgb(0 0 255 / 30%)
+  border-radius: 8px
+
+.mat-mdc-card-title
+  color: var(--highlight-color)
+  margin: 1rem 0
+
+.mat-table
+  display: block
+
+.mat-expansion-panel
+  margin-top: 2rem!important
+  background: transparent
+  border:  1px solid #424242
+
+  .mat-expansion-panel-header:hover,
+  .mat-expansion-panel-header:focus
+    background: transparent
+    .mat-expansion-panel-header-title
+      color: var(--highlight-color)
+
+.mat-row,
+.mat-header-row
+  display: flex
+  border-bottom-width: 1px
+  border-bottom-style: solid
+  align-items: center
+  min-height: 48px
+  padding: 0 2rem
+  border-color: #424242
+  color: #fff
+  column-gap: 0.5rem
+
+
+.mat-cell,
+.mat-header-cell
+  flex: 1
+  overflow: hidden
+  word-wrap: break-word
+
+.mat-header-cell
+  color: #a6a6a6
+
+.mdc-card__actions
+  padding: 1.5rem 1rem
+  a
+    text-decoration: none
+    color: var(--highlight-color)
+  a:hover
+    text-decoration: underline
+
+
+.personal-details, .personal-details th, .personal-details td
+  border: 1px solid #323232
+  border-collapse: collapse
+
+.personal-details th, .personal-details td
+  padding: 0.5rem
+  text-align: left
+
+::ng-deep .mat-mdc-progress-bar
+    --mdc-linear-progress-active-indicator-color: #FFE81F
+    position: absolute!important
+    top: 0
+    left: 0
+
+::ng-deep .mat-mdc-progress-bar .mdc-linear-progress__buffer-bar
+  background-color: rgb(251 228 29 / 16%)
+
+
+::ng-deep .mat-mdc-progress-spinner
+  width: 20px!important
+  height: 20px!important
+  --mdc-circular-progress-active-indicator-color: #FFE81F

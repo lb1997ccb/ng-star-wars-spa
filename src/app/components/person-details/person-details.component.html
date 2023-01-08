@@ -1,0 +1,70 @@
+<div *ngIf="!showEmpty; else notFound">
+  <mat-card class="card" *ngIf="person; else loading">
+    <mat-card-header>
+      <mat-card-subtitle>{{ person.description }}</mat-card-subtitle>
+      <mat-card-title>{{ person.properties.name }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="mat-table">
+        <div class="mat-header-row">
+          <div class="mat-header-cell">Gender</div>
+          <div class="mat-header-cell">Homeworld</div>
+          <div class="mat-header-cell">Birth year</div>
+        </div>
+        <div class="mat-row">
+          <div class="mat-cell">{{ person.properties.gender }}</div>
+          <div class="mat-cell">
+            <span *ngIf="planet; else loading">{{
+              planet.properties.name
+            }}</span>
+            <ng-template #loading>
+              <mat-spinner></mat-spinner>
+            </ng-template>
+          </div>
+          <div class="mat-cell">{{ person.properties.birth_year }}</div>
+        </div>
+      </div>
+      <mat-accordion class="personal-details-accordion" multi>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title> More information </mat-panel-title>
+          </mat-expansion-panel-header>
+          <table class="personal-details" style="width: 100%">
+            <tr>
+              <th>Height:</th>
+              <td>{{ person.properties.height }}</td>
+            </tr>
+            <tr>
+              <th>Mass:</th>
+              <td>
+                {{ person.properties.mass }}
+              </td>
+            </tr>
+            <tr>
+              <th>Skin color:</th>
+              <td>{{ person.properties.skin_color }}</td>
+            </tr>
+            <tr>
+              <th>Eye color:</th>
+              <td>{{ person.properties.eye_color }}</td>
+            </tr>
+            <tr>
+              <th>Hair color:</th>
+              <td>{{ person.properties.hair_color }}</td>
+            </tr>
+          </table>
+        </mat-expansion-panel>
+      </mat-accordion>
+      <mat-divider></mat-divider>
+    </mat-card-content>
+    <mat-card-actions>
+      <a routerLink="/" class="custom-button" title="Go back">Go back</a>
+    </mat-card-actions>
+  </mat-card>
+  <ng-template #loading>
+    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+  </ng-template>
+</div>
+<ng-template #notFound>
+  <app-not-found-message></app-not-found-message>
+</ng-template>

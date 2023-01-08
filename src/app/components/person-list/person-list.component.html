@@ -1,0 +1,35 @@
+<ng-container *ngIf="!showEmpty; else notFound">
+  <ng-container *ngIf="personList; else loading">
+    <h2>List of fictional characters</h2>
+    <ul class="list-group">
+      <li *ngFor="let post of personList.results" class="list-group-item">
+        <a
+          [routerLink]="['person']"
+          [queryParams]="{ id: post.uid }"
+          title="{{ post.name }} details"
+        >
+          {{ post.name }}
+        </a>
+      </li>
+    </ul>
+    <mat-paginator
+      *ngIf="personList"
+      [length]="personList.total_records"
+      [pageSize]="pageSize"
+      [pageIndex]="paginatorIndex"
+      [disabled]="paginatorDisabled"
+      aria-label="Select page"
+      (page)="handlePageEvent($event)"
+    >
+    </mat-paginator>
+  </ng-container>
+  <ng-template #loading>
+    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+  </ng-template>
+</ng-container>
+<ng-container *ngIf="paginatorDisabled">
+  <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+</ng-container>
+<ng-template #notFound>
+  <app-not-found-message></app-not-found-message>
+</ng-template>
