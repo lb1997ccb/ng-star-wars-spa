@@ -1,6 +1,7 @@
 # StarWarsSpa
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.4.
+The app makes use of SWAPI.co apis for fetching data related to Star Wars.
 
 ## Development server
 
@@ -9,6 +10,10 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 ## Node version
 
 node version `v16.17.0` & npm version `8.18.0`
+
+## Install node packages
+
+Install the node packages by running command in project root path: `npm i`
 
 ## Code scaffolding
 
