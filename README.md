@@ -1,31 +1,57 @@
-# StarWarsSpa
+# Angular Star Wars App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.4.
+## Overview
 
-## Development server
+Angular Star Wars App is a web application built with Angular that interacts with the Star Wars API. It allows users to browse and explore information about characters and planets from the Star Wars universe. The app features pagination for navigating through character lists, caching to optimize API calls, and dynamic routing for viewing detailed character information.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Features
 
-## Node version
+- **Pagination:** Navigate through lists of Star Wars characters.
+- **Caching:** Improve performance with data caching for repeated API calls.
+- **Dynamic Routing:** View detailed information about each character.
+- **Responsive Design:** User-friendly interface with Angular Material components.
 
-node version `v16.17.0` & npm version `8.18.0`
+## Getting Started
 
-## Code scaffolding
+### Prerequisites
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Make sure you have Node.js and npm installed on your development machine.
 
-## Build
+### Installation
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Clone the repository and install dependencies:
 
-## Running unit tests
+```bash
+git clone <repository-url>
+cd angular-star-wars-app
+npm install
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Development Server
 
-## Running end-to-end tests
+To start the development server, run the following command:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```bash
+ng serve
+```
 
-## Further help
+## Usage
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Browse characters using the pagination controls.
+- Click on a character to view detailed information.
+- Navigate back and forth using the browser's back and forward buttons.
+
+## Technologies Used
+
+- Angular
+- TypeScript
+- Angular Material
+- Star Wars API
+
+## Contributing
+
+Contributions are welcome! Fork the repository, make changes, and submit a pull request.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.

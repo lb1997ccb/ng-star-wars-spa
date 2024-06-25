@@ -28,7 +28,7 @@ export class PostService {
   }
 
   private handleRequest(url: string): Observable<any> {
-    if (this.cachingService.isCashed(url)) {
+    if (this.cachingService.isCached(url)) {
       return of(this.cachingService.getData(url));
     } else {
       return this.httpClient.get<Observable<any>>(url).pipe(
