@@ -49,13 +49,13 @@ export class PersonDetailsComponent implements OnInit {
   private setPlanetDetails(person: PersonDetailsViewModel): void {
     // Ensure properties exist before fetching planet details
     person.properties &&
-    this.postService
-      .getPlanetDetails(person.properties.homeworld)
-      .subscribe((response: PlanetDetailsResult) => {
-        if (isDetailsViewModel(response.result)) {
-          // Update planet details if response is valid
-          this.planet = response.result;
-        }
-      });
+      this.postService
+        .getPlanetDetails(person.properties.homeworld)
+        .subscribe((response: PlanetDetailsResult) => {
+          if (isDetailsViewModel(response.result)) {
+            // Update planet details if response is valid
+            this.planet = response.result;
+          }
+        });
   }
 }

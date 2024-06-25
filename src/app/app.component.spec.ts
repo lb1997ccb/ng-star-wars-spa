@@ -56,30 +56,3 @@ describe('AppComponent', () => {
     );
   });
 });
-
-
-const array = [
-  [
-    {
-      type: 'checkbox',
-      value: 'name1',
-      checked: false
-    },
-    {
-      type: 'string',
-      value: 'name1'
-    }
-  ],
-  [
-    {
-      type: 'checkbox',
-      value: 'name2',
-      checked: true
-
-    },
-    {
-      type: 'string',
-      value: 'name2'
-    }
-  ]
-]
