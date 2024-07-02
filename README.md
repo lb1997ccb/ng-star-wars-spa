@@ -2,7 +2,7 @@
 
 ## Overview
 
-Angular Star Wars App is a web application built with Angular that interacts with the Star Wars API. It allows users to browse and explore information about characters and planets from the Star Wars universe. The app features pagination for navigating through character lists, caching to optimize API calls, and dynamic routing for viewing detailed character information.
+Angular Star Wars App is a web application built with Angular that interacts with the Star Wars API. It allows you to browse and explore information about characters and planets from the Star Wars universe. The app features pagination for navigating through character lists, caching to optimize API calls, and dynamic routing for viewing detailed character information.
 
 ## Features
 
